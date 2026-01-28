@@ -1,58 +1,94 @@
-# Cypress Heroes Demo Application
+# Cypress Heroes
 
-This is a demo application that shows how to use Cypress to run end-to-end,
-component, and API tests against an application.
+Projeto de automação de testes end-to-end utilizando **Cypress**, criado com o objetivo de praticar e demonstrar conhecimentos em testes automatizados de aplicações web.
 
-## Getting Started
+O foco do projeto é validar fluxos principais da aplicação, regras de negócio e permissões de usuários.
 
-The app is a mono repo that uses npm workspaces. Once you clone the project,
-install the dependencies at the root folder:
+---
+
+## Tecnologias utilizadas
+
+- Cypress
+- JavaScript
+- Node.js
+- Git
+
+---
+
+## Sobre os testes
+
+Os testes cobrem os seguintes cenários:
+
+- Login com usuário válido e inválido
+- Listagem de heróis
+- Criação de herói
+- Edição de herói
+- Exclusão de herói
+- Validação de campos obrigatórios
+- Validação de permissões de usuário
+
+Usuários sem permissão administrativa não devem visualizar ações como criar, editar ou excluir heróis.
+
+---
+
+## Padrões adotados
+
+- Uso de `data-cy` para seletores
+- Testes organizados por funcionalidade
+- Cenários claros e objetivos
+- Validações funcionais e de permissão
+- Separação de responsabilidades nos testes
+
+Exemplo de validação de permissão:
+
+```js
+cy.get('[data-cy=create-hero]').should('not.exist')
+cy.get('[data-cy=edit-hero]').should('not.exist')
+cy.get('[data-cy=delete-hero]').should('not.exist')
+```
+
+Após clonar o repositório, acesse a pasta raiz do projeto e instale as dependências:
 
 ```sh
 npm install
 ```
-
-After that a few more things need to be set up (databases and such), to do so run:
-
+Em seguida, execute o setup inicial (configurações e dependências adicionais):
 ```sh
 npm run setup
 ```
-
-
-To launch the app for development, run:
-
 ```sh
 npm run dev
 ```
 
-This will start both the client and server apps in dev mode. The site will be
-available at http://localhost:3000.
+## Como executar os testes Cypress
 
-## App Overview
-
-The Cypress Heroes app consists of a frontend client app written in React that
-uses Vite, as well as a backend app that uses NestJS.
-
-### React Client App
-
-The React client app is located in the **client** folder. It is a standard React [Vite](https://vitejs.dev/) app.
-
-Todo: fill out
-
-### NestJS Server App
-
-The server app is in the **server** folder. It is built with the [NestJS](https://nestjs.com/) Node.js framework. It uses [Prisma](https://www.prisma.io/) for the database ORM.
-
-#### Database seeding and resetting
-
-The database is seeded from the **server/prisma/seed.ts** script when you set up the app. If at any time you want to reset the database back to its initial state, run:
-
+Abrir o Cypress em modo interativo:
 ```sh
-npm run resetdb
+npx cypress open
 ```
 
-## Environment Variables
+🧾 Casos de teste
 
-The client app uses an environment variable to know what the URL is for the
-backend api named `VITE_API_URL`. It defaults to "http://localhost:3001" for use
-in dev mode, and should be overriden in other environments/modes.
+## O projeto contempla testes para:
+
+- Login
+- Listagem de heróis
+- Criação de herói
+- Edição de herói
+- Exclusão de herói
+- Validação de permissões de usuário
+
+Bug Reports
+
+## O repositório contém um arquivo com relatos de bugs, descrevendo:
+
+- Descrição do problema
+- Passos para reprodução
+- Resultado esperado
+- Resultado obtido
+- Severidade e prioridade
+
+
+# Autor
+Pedro Valim
+
