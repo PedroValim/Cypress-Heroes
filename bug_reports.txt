@@ -1,0 +1,189 @@
+==============================
+BUG REPORTS - CYPRESS HEROES
+==============================
+
+Projeto: Cypress Heroes
+Ambiente: Local
+Browser: Chrome
+Tipo de Teste: Funcional / UI
+Reportado por: QA
+Data: ___/___/____
+
+--------------------------------------------------
+BUG-001 – Login inválido não exibe mensagem clara
+--------------------------------------------------
+
+Título:
+Login inválido não exibe mensagem de erro clara ao usuário
+
+Descrição:
+Ao tentar realizar login com credenciais inválidas, o sistema não exibe
+uma mensagem clara informando o motivo da falha, o que pode gerar confusão
+para o usuário.
+
+Pré-condições:
+- Aplicação em execução
+- Usuário na tela de login
+
+Passos para reprodução:
+1. Acessar a aplicação Cypress Heroes
+2. Informar usuário inválido
+3. Informar senha inválida
+4. Clicar no botão "Login"
+
+Resultado esperado:
+O sistema deve exibir uma mensagem clara informando que as credenciais
+são inválidas.
+
+Resultado obtido:
+O sistema não exibe mensagem clara ou exibe mensagem genérica.
+
+Severidade:
+Média
+
+Prioridade:
+Média
+
+Status:
+Aberto
+
+--------------------------------------------------
+BUG-002 – Usuário sem permissão visualiza ações administrativas
+--------------------------------------------------
+
+Título:
+Usuário sem permissão consegue visualizar botões administrativos
+
+Descrição:
+Usuários sem perfil administrativo conseguem visualizar botões de
+criação, edição ou exclusão de heróis, o que fere as regras de permissão
+da aplicação.
+
+Pré-condições:
+- Usuário comum autenticado
+
+Passos para reprodução:
+1. Realizar login com usuário sem permissão administrativa
+2. Acessar a listagem de heróis
+3. Abrir o detalhe de um herói
+
+Resultado esperado:
+Usuários sem permissão NÃO devem visualizar botões administrativos
+(criar, editar ou excluir herói).
+
+Resultado obtido:
+Botões administrativos são exibidos para usuários comuns.
+
+Severidade:
+Alta
+
+Prioridade:
+Alta
+
+Status:
+Aberto
+
+--------------------------------------------------
+BUG-003 – Falta feedback visual após criação de herói
+--------------------------------------------------
+
+Título:
+Sistema não exibe feedback visual após criação de herói
+
+Descrição:
+Após criar um novo herói com sucesso, o sistema não apresenta nenhuma
+mensagem de confirmação ao usuário.
+
+Pré-condições:
+- Usuário autenticado
+- Usuário com permissão de criação
+
+Passos para reprodução:
+1. Realizar login
+2. Criar um novo herói preenchendo todos os campos obrigatórios
+3. Salvar
+
+Resultado esperado:
+Sistema deve exibir mensagem de sucesso confirmando a criação do herói.
+
+Resultado obtido:
+Nenhuma mensagem de sucesso é exibida.
+
+Severidade:
+Baixa
+
+Prioridade:
+Média
+
+Status:
+Aberto
+
+--------------------------------------------------
+BUG-004 – Listagem de heróis não exibe estado vazio
+--------------------------------------------------
+
+Título:
+Aplicação não informa quando não há heróis cadastrados
+
+Descrição:
+Quando não existem heróis cadastrados, a aplicação não exibe uma mensagem
+indicando lista vazia.
+
+Pré-condições:
+- Usuário autenticado
+- Nenhum herói cadastrado
+
+Passos para reprodução:
+1. Realizar login
+2. Acessar a tela de listagem de heróis
+
+Resultado esperado:
+Exibir mensagem informando que não há heróis cadastrados.
+
+Resultado obtido:
+Tela fica vazia sem orientação ao usuário.
+
+Severidade:
+Baixa
+
+Prioridade:
+Baixa
+
+Status:
+Aberto
+
+--------------------------------------------------
+BUG-005 – Falta validação de campos obrigatórios na edição
+--------------------------------------------------
+
+Título:
+Sistema permite salvar herói sem preencher campos obrigatórios
+
+Descrição:
+Durante a edição de um herói, o sistema permite salvar o registro sem
+preencher campos obrigatórios.
+
+Pré-condições:
+- Usuário autenticado
+- Usuário com permissão de edição
+
+Passos para reprodução:
+1. Acessar um herói
+2. Clicar em editar
+3. Limpar campos obrigatórios
+4. Salvar
+
+Resultado esperado:
+Sistema deve validar os campos e impedir o salvamento.
+
+Resultado obtido:
+Sistema permite salvar sem validação.
+
+Severidade:
+Alta
+
+Prioridade:
+Alta
+
+Status:
+Aberto

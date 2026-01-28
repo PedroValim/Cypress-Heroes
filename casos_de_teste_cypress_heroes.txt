@@ -1,0 +1,179 @@
+=====================================================
+CASOS DE TESTE – CYPRESS HEROES
+Projeto: Cypress Heroes
+Autor: Pedro Valim
+Tipo: Testes Funcionais / Automatizados
+Ferramenta: Cypress
+=====================================================
+
+-----------------------------------------------------
+CT-001 – Login com usuário válido
+-----------------------------------------------------
+Funcionalidade:
+Autenticação de Usuário
+
+Objetivo:
+Verificar se um usuário válido consegue realizar login com sucesso no sistema.
+
+Pré-condições:
+- Aplicação Cypress Heroes em execução
+- Usuário válido cadastrado
+- Navegador aberto na tela de login
+
+Dados de Teste:
+Usuário: admin
+Senha: admin123
+
+Passos:
+1. Acessar a aplicação Cypress Heroes
+2. Informar o usuário válido no campo Username
+3. Informar a senha válida no campo Password
+4. Clicar no botão Login
+
+Resultado Esperado:
+- O sistema deve autenticar o usuário
+- O usuário deve ser redirecionado para a tela de listagem de heróis
+
+Tipo de Teste:
+Funcional / Automatizado
+
+Status:
+(A definir após execução)
+
+-----------------------------------------------------
+CT-002 – Login com usuário inválido
+-----------------------------------------------------
+Funcionalidade:
+Autenticação de Usuário
+
+Objetivo:
+Garantir que o sistema não permita login com credenciais inválidas.
+
+Pré-condições:
+- Aplicação em execução
+- Navegador aberto na tela de login
+
+Dados de Teste:
+Usuário: admin
+Senha: senha_invalida
+
+Passos:
+1. Acessar a aplicação Cypress Heroes
+2. Informar usuário inválido ou senha inválida
+3. Clicar no botão Login
+
+Resultado Esperado:
+- O sistema deve exibir mensagem de erro
+- O usuário não deve ser autenticado
+- O usuário deve permanecer na tela de login
+
+Tipo de Teste:
+Funcional / Automatizado
+
+-----------------------------------------------------
+CT-003 – Listagem de heróis após login
+-----------------------------------------------------
+Funcionalidade:
+Listagem de Heróis
+
+Objetivo:
+Verificar se a lista de heróis é exibida corretamente após login bem-sucedido.
+
+Pré-condições:
+- Usuário autenticado no sistema
+
+Passos:
+1. Realizar login com usuário válido
+2. Acessar a tela principal da aplicação
+
+Resultado Esperado:
+- A lista de heróis deve ser exibida
+- Cada herói deve apresentar nome e informações básicas
+
+Tipo de Teste:
+Funcional / Automatizado
+
+-----------------------------------------------------
+CT-004 – Criar novo herói
+-----------------------------------------------------
+Funcionalidade:
+Cadastro de Herói
+
+Objetivo:
+Validar que o usuário consegue cadastrar um novo herói com sucesso.
+
+Pré-condições:
+- Usuário autenticado
+- Tela de listagem de heróis carregada
+
+Dados de Teste:
+Nome do Herói: Herói Teste
+Poder: Super Força
+
+Passos:
+1. Acessar a opção de criar novo herói
+2. Preencher os campos obrigatórios
+3. Clicar no botão Salvar
+
+Resultado Esperado:
+- O herói deve ser criado com sucesso
+- O novo herói deve aparecer na lista
+
+Tipo de Teste:
+Funcional / Automatizado
+
+-----------------------------------------------------
+CT-005 – Editar herói existente
+-----------------------------------------------------
+Funcionalidade:
+Edição de Herói
+
+Objetivo:
+Garantir que seja possível editar os dados de um herói existente.
+
+Pré-condições:
+- Usuário autenticado
+- Pelo menos um herói cadastrado
+
+Dados de Teste:
+Novo nome do herói: Herói Editado
+
+Passos:
+1. Selecionar um herói da lista
+2. Clicar na opção Editar
+3. Alterar os dados do herói
+4. Salvar as alterações
+
+Resultado Esperado:
+- As alterações devem ser salvas
+- O herói deve aparecer com os dados atualizados
+
+Tipo de Teste:
+Funcional / Automatizado
+
+-----------------------------------------------------
+CT-006 – Controle de permissão (UI)
+-----------------------------------------------------
+Funcionalidade:
+Controle de Permissões
+
+Objetivo:
+Verificar se usuários sem permissão não visualizam ações restritas na interface.
+
+Pré-condições:
+- Usuário autenticado com perfil restrito
+
+Passos:
+1. Realizar login com usuário sem permissão
+2. Acessar a tela de heróis
+
+Resultado Esperado:
+- Botões de criar, editar ou excluir herói não devem ser exibidos
+- O sistema deve respeitar o nível de permissão do usuário
+
+Tipo de Teste:
+Funcional
+
+=====================================================
+FIM DOS CASOS DE TESTE
+=====================================================

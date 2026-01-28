@@ -1,0 +1,59 @@
+==============================
+SUGESTÕES DE MELHORIA
+CYPRESS HEROES
+==============================
+
+Projeto: Cypress Heroes
+Ambiente: Local
+Tipo: Usabilidade / Qualidade / Automação
+Sugerido por: QA
+Data: ___/___/____
+
+--------------------------------------------------
+MELHORIA-001 – Padronização de mensagens de erro
+--------------------------------------------------
+
+Descrição:
+Atualmente, algumas mensagens de erro não são claras ou não seguem um
+padrão visual e textual consistente.
+
+Sugestão:
+- Padronizar mensagens de erro em toda a aplicação
+- Informar claramente o motivo do erro (ex: credenciais inválidas,
+campo obrigatório não preenchido)
+- Utilizar cores e ícones para melhorar a experiência do usuário
+
+Benefício:
+Melhora a usabilidade e reduz dúvidas dos usuários.
+
+--------------------------------------------------
+MELHORIA-002 – Feedback visual após ações do usuário
+--------------------------------------------------
+
+Descrição:
+Após ações importantes como criação, edição ou exclusão de heróis, a
+aplicação não exibe feedback visual claro.
+
+Sugestão:
+- Exibir mensagens de sucesso (toast/snackbar/modal)
+- Informar claramente que a ação foi concluída com êxito
+
+Benefício:
+Melhora a experiência do usuário e aumenta a confiança no sistema.
+
+--------------------------------------------------
+MELHORIA-003 – Implementação de estado vazio (Empty State)
+--------------------------------------------------
+
+Descrição:
+Quando não existem heróis cadastrados, a tela de listagem não informa
+claramente essa situação.
+
+Sugestão:
+- Exibir mensagem informativa como: "Nenhum herói cadastrado"
+- Incluir um botão de ação para criar um novo herói
+
+Benefício:
+Melhora a usabilidade e orienta melhor o usuário.
+
+--------------------------------------------------
