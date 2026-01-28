@@ -67,7 +67,6 @@ Abrir o Cypress em modo interativo:
 npx cypress open
 ```
 
-🧾 Casos de teste
 
 ## O projeto contempla testes para:
 
@@ -77,8 +76,6 @@ npx cypress open
 - Edição de herói
 - Exclusão de herói
 - Validação de permissões de usuário
-
-Bug Reports
 
 ## O repositório contém um arquivo com relatos de bugs, descrevendo:
 
